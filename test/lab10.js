@@ -8,7 +8,7 @@ function pageLoad() {
   var user_name = document.getElementById("inName").value;
   var user_color = document.getElementById("inColor").value;
 
-  console.log(user_name + " " + user_color);
+  //console.log(user_name + " " + user_color);
 
-
+  document.cookie = "name=" + user_name;
 }
