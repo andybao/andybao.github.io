@@ -6,9 +6,9 @@ var tableObj;
 
 function initAll() {
   tableObj = document.getElementById("schedTbl");
-  document.getElementById("routeRb1").onclick = getTextFile("sched1.txt");
+  //document.getElementById("routeRb1").onclick = getTextFile("sched1.txt");
   document.getElementById("routeRb2").onclick = getTextFile("sched2.txt");
-  document.getElementById("routeRb3").onclick = getTextFile("sched3.txt");
+  //document.getElementById("routeRb3").onclick = getTextFile("sched3.txt");
 }
 
 function getTextFile() {
