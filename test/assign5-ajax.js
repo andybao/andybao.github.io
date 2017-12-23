@@ -20,13 +20,12 @@ function getTextFile() {
       }
       else {
         alert("Connection was unsuccessful: " + xhttp.readyState + ", " + xhttp.status);
+      }
     }
   }
-
   xhttp.open("GET", "sched1.txt", true);
 
   xhttp.send(null);
-  }
 }
 
 window.onload = initAll;
