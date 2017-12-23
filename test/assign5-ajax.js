@@ -16,7 +16,7 @@ function pageLoad() {
 
   xhttp.open("GET", "sched1.txt", true);
 
-  xttp.send();
+  xhttp.send();
 }
 
 function displayMsg(xml) {
