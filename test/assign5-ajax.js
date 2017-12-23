@@ -6,10 +6,12 @@ var tableObj;
 
 function initAll() {
   tableObj = document.getElementById("schedTbl");
-  document.getElementById("routeRb1").checked = getTextFile;
+  document.getElementById("routeRb1").onclick = getTextFile;
 }
 
 function getTextFile() {
+
+  alert("xxx");
 
   var xhttp = new XMLHttpRequest();
 
