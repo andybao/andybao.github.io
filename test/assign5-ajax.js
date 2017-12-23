@@ -6,7 +6,7 @@ var tableObj;
 
 function initAll() {
   tableObj = document.getElementById("schedTbl");
-  document.getElementById("routeRb1").onclick = getTextFile;
+  document.getElementById("routeRb1").checked = getTextFile;
 }
 
 function getTextFile() {
