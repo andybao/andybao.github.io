@@ -22,7 +22,4 @@ function pageLoad() {
 
   xhttp.send();
   };
-
-function displayMsg(xml) {
-
-}
+};
