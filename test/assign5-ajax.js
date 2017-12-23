@@ -10,7 +10,8 @@ function pageLoad() {
 
   xhttp.onreadystatechange = function() {
     if (this.readyState === 4 && this.status === 200) {
-      tableObj = this.responseText;
+      tableObj.innerHTML = this.responseText;
+
     } else {
       alert("Connection was unsuccessful");
     }
