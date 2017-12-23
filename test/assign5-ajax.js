@@ -1,31 +1,32 @@
 //#### ASSIGNMENT 5 - STORE HOURS ####
 
+window.onload = initAll;
 
 var tableObj;
 
 function initAll() {
   tableObj = document.getElementById("schedTbl");
-  document.getElementById("routeRb1").onclick = getTextFile;
+  document.getElementById("routeRb1").onclick = getTextFile("sched1.txt");
+  document.getElementById("routeRb2").onclick = getTextFile("sched2.txt");
+  document.getElementById("routeRb3").onclick = getTextFile("sched3.txt");
 }
 
 function getTextFile() {
 
   var xhttp = new XMLHttpRequest();
 
-  xhttp.onreadystatechange = function() {
+  xhttp.onreadystatechange = function(location) {
 
     if (xhttp.readyState === 4) {
       if (xhttp.status === 200) {
         tableObj.innerHTML = xhttp.responseText;
       }
       else {
-        alert("Connection was unsuccessful: " + xhttp.readyState + ", " + xhttp.status);
+        alert("Connection was unsuccessful");
       }
     }
   }
-  xhttp.open("GET", "sched1.txt", true);
+  xhttp.open("GET", location, true);
 
   xhttp.send(null);
 }
-
-window.onload = initAll;
