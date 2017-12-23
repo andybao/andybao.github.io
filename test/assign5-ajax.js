@@ -11,22 +11,21 @@ function initAll() {
 
 function getTextFile() {
 
-  alert("xxx");
-
   var xhttp = new XMLHttpRequest();
 
   xhttp.onreadystatechange = function() {
-    if (this.readyState === 4) {
-      if (this.status === 200) {
-        tableObj.innerHTML = this.responseText;
+    alert("xxxx");
+    if (xhttp.readyState === 4) {
+      if (xhttp.status === 200) {
+        tableObj.innerHTML = xhttp.responseText;
       }
       else {
-      alert("Connection was unsuccessful: " + this.readyState + ", " + this.status);
+      alert("Connection was unsuccessful: " + xhttp.readyState + ", " + xhttp.status);
     }
   }
 
   xhttp.open("GET", "sched1.txt", true);
 
   xhttp.send(null);
-  }
+  };
 }
