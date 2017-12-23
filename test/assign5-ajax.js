@@ -1,6 +1,6 @@
 //#### ASSIGNMENT 5 - STORE HOURS ####
 
-window.onload = pageLoad;
+window.onload = initAll;
 
 var tableObj;
 
