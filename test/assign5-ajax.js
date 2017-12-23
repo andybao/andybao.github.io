@@ -8,7 +8,7 @@ function initAll() {
   var formHandle = document.forms[0];
   tableObj = document.getElementById("schedTbl");
 
-  formHandle.onsubmit = processForm;
+  formHandle.onclick = processForm;
 
   //document.getElementById("routeRb1").onclick = getTextFile("sched1.txt");
   //document.getElementById("routeRb2").onclick = getTextFile();
@@ -16,10 +16,13 @@ function initAll() {
 }
 
 function processForm() {
+  //alert("xxx");
   document.getElementById("routeRb2").onclick = getTextFile();
 }
 
 function getTextFile() {
+
+  alert("xxx");
 
   var xhttp = new XMLHttpRequest();
 
