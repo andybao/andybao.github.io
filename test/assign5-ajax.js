@@ -13,7 +13,7 @@ function pageLoad() {
       tableObj.innerHTML = this.responseText;
 
     } else {
-      alert("Connection was unsuccessful");
+      alert("Connection was unsuccessful: " + this.readyState + ", " + this.status);
     }
   };
 
