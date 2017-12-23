@@ -1,28 +1,30 @@
 //#### ASSIGNMENT 5 - STORE HOURS ####
-
-
-
 var tableObj;
+var formHandle;
 
 function initAll() {
-  var formHandle = document.forms[0];
+  formHandle = document.forms[0];
   tableObj = document.getElementById("schedTbl");
 
   formHandle.onclick = processForm;
-
-  //document.getElementById("routeRb1").onclick = getTextFile("sched1.txt");
-  //document.getElementById("routeRb2").onclick = getTextFile();
-  //document.getElementById("routeRb3").onclick = getTextFile("sched3.txt");
 }
 
 function processForm() {
-  //alert("xxx");
-  document.getElementById("routeRb2").onclick = getTextFile();
+
+  switch(formHandle.routeRb.value) {
+  case "1":
+    getTextFile("sched1.txt");
+    break;
+  case "2":
+    getTextFile("sched2.txt");
+    break;
+  case "3":
+    getTextFile("sched3.txt");
+    break;
+  }
 }
 
-function getTextFile() {
-
-  alert("xxx");
+function getTextFile(location) {
 
   var xhttp = new XMLHttpRequest();
 
@@ -37,7 +39,7 @@ function getTextFile() {
       }
     }
   }
-  xhttp.open("GET", "sched2.txt", true);
+  xhttp.open("GET", location, true);
 
   xhttp.send(null);
 }
