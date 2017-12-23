@@ -2,9 +2,14 @@
 
 window.onload = pageLoad;
 
-function pageLoad() {
+var tableObj;
 
-  var tableObj = document.getElementById("schedTbl");
+function initAll() {
+  tableObj = document.getElementById("schedTbl");
+  document.getElementById("routeRb1").onclick = getTextFile;
+}
+
+function getTextFile() {
 
   var xhttp = new XMLHttpRequest();
 
@@ -16,10 +21,10 @@ function pageLoad() {
       else {
       alert("Connection was unsuccessful: " + this.readyState + ", " + this.status);
     }
-  };
+  }
 
   xhttp.open("GET", "sched1.txt", true);
 
-  xhttp.send();
-  };
-};
+  xhttp.send(null);
+  }
+}
