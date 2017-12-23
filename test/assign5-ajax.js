@@ -5,10 +5,18 @@
 var tableObj;
 
 function initAll() {
+  var formHandle = document.forms[0];
   tableObj = document.getElementById("schedTbl");
+
+  formHandle.onsubmit = processForm;
+
   //document.getElementById("routeRb1").onclick = getTextFile("sched1.txt");
-  document.getElementById("routeRb2").onclick = getTextFile();
+  //document.getElementById("routeRb2").onclick = getTextFile();
   //document.getElementById("routeRb3").onclick = getTextFile("sched3.txt");
+}
+
+function processForm() {
+  document.getElementById("routeRb2").onclick = getTextFile();
 }
 
 function getTextFile() {
