@@ -1,6 +1,6 @@
 //#### ASSIGNMENT 5 - STORE HOURS ####
 
-window.onload = initAll;
+
 
 var tableObj;
 
@@ -30,3 +30,5 @@ function getTextFile() {
 
   xhttp.send(null);
 }
+
+window.onload = initAll;
