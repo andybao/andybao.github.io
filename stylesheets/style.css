@@ -10,10 +10,6 @@ body {
     border: 2px solid black;
 }
 
-.LI-profile-badge {
-    display: inline-block;
-}
-
 fieldset {
     border: 2px solid black;
     margin: 1em;
