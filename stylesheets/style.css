@@ -4,8 +4,7 @@ body {
 
 .container {
     text-align:center;
-    padding: 1em;
-    margin: 1em;
+    
     background-color: silver;
     border: 2px solid black;
 }
