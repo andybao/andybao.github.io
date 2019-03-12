@@ -9,6 +9,15 @@ body {
     background-color: silver;
     border: 2px solid black;
 }
+#main-menu ul {
+    /*background-color: red;*/
+    list-style: none;
+    padding: 0;
+  }
+#main-menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
 
 fieldset {
     border: 2px solid black;
